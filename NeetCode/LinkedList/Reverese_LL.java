@@ -26,13 +26,13 @@ public class Reverese_LL {
         Node next = null;
 
         while (curr != null) {
-            next = curr.next;   // Step 1: Save next node
-            curr.next = prev;   // Step 2: Reverse current link
-            prev = curr;        // Step 3: Move prev forward
-            curr = next;        // Step 4: Move curr forward
+            next = curr.next;  
+            curr.next = prev;   
+            prev = curr;        
+            curr = next;        
         }
 
-        head = prev; // Step 5: Update head
+        head = prev; 
     }
 
     public void PrintLL(){
