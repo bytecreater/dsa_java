@@ -1,4 +1,4 @@
-public class Zeos_1s_2s_Sort {
+public class Sort {
     public static int Sort(int arr[]){
         int count = 0;
         for (int i = 0; i < arr.length; i++){
