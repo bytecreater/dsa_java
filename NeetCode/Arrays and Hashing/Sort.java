@@ -1,5 +1,5 @@
 public class Sort {
-    public static int Sort(int arr[]){
+    public static int sort(int arr[]){
         int count = 0;
         for (int i = 0; i < arr.length; i++){
             if (arr[i] == 0){
@@ -29,7 +29,7 @@ public class Sort {
     }
     public static void main(String[] args) {
         int[] arr = {1,1,2,0,1,2};
-        Sort(arr); 
+        sort(arr); 
     }
     
 }
