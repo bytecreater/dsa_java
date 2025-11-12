@@ -4,24 +4,28 @@ public class Asteroids_collision {
     public static int[] asteroidCollision(int[] asteroids) {
         Stack<Integer> s = new Stack<>();
         for(int a : asteroids){
-            if(!s.isEmpty() && s.peek()*a > 0){
-                s.push(a);
-            }
-            while(!s.isEmpty() && s.peek()*a < 0){
+            boolean alive = true;
+            while(!s.isEmpty() && s.peek() > 0 && a < 0){
                 if(Math.abs(s.peek()) == Math.abs(a)){
                     s.pop();
+                    alive = false;
                     break;
                 }
-                if(Math.abs(s.peek()) < Math.abs(a)){
+                else if(Math.abs(s.peek()) < Math.abs(a)){
                     s.pop();
                 }
-                if(Math.abs(s.peek()) > Math.abs(a)){
+                else{
+                    alive = false;
                     break;
                 }
             }
+            if(alive){
+                    s.push(a);
+                }
         }
-        int[] ans = new int[s.size()];
-        for(int i = 0; i < s.size(); i++){
+        int n = s.size();
+        int[] ans = new int[n];
+        for(int i = n-1; i >= 0; i--){
             ans[i] = s.pop();
         }
         return ans;
