@@ -7,10 +7,7 @@ public class reverse {
                 System.out.print(str.charAt(i));
             }
             System.out.print(" ");
-        }
-        // for(String st : arr){
-        //     System.out.println(st);
-        // 
+        } 
     }
     
 }
